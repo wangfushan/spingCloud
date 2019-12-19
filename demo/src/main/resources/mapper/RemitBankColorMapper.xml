@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.RemitBankColorMapper">
+
+    <sql id="table"> rp_remit_bank_color </sql>
+
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.RemitBankColor">
+        <id column="ID" property="id" jdbcType="VARCHAR"/>
+        <result column="BANK_NAME" property="bankName" jdbcType="VARCHAR"/>
+        <result column="TYPE_CODE" property="typeCode" jdbcType="VARCHAR"/>
+        <result column="BANK_TYPE" property="bankType" jdbcType="VARCHAR"/>
+        <result column="RGB" property="rgb" jdbcType="VARCHAR"/>
+        <result column="BANK_LOGO" property="bankLogo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		ID,TYPE_CODE, BANK_NAME,BANK_TYPE, RGB, BANK_LOGO
+	</sql>
+    <select id="listBankColor" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select * from
+        <include refid="table"/>
+        <where>
+            TYPE_CODE = #{typeCode}
+        </where>
+    </select>
+
+
+<!--    <insert id="insert" parameterType="com.roncoo.pay.bank.entity.RemitBankColor">
+        insert into
+        <include refid="table"/>
+        (ID,TYPE_CODE, BANK_NAME,BANK_TYPE,RGB, BANK_LOGO)
+        values (#{id,jdbcType=VARCHAR},#{typeCode,jdbcType=VARCHAR},#{bankName,jdbcType=VARCHAR},
+        #{bankType,jdbcType=VARCHAR}, #{rgb,jdbcType=VARCHAR}, #{bankLogo,jdbcType=VARCHAR})
+
+    </insert>-->
+
+</mapper>
