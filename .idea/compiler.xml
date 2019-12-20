@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaserver" />
         <module name="eurekaservice" />
+        <module name="test" />
         <module name="demo" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="demo" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
       <module name="eurekaservice" options="-parameters" />
+      <module name="test" options="-parameters" />
     </option>
   </component>
 </project>
