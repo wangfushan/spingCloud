@@ -14,8 +14,20 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-		ID,TYPE_CODE, BANK_NAME,BANK_TYPE, RGB, BANK_LOGO
+		ID,TYPE_CODE, BANK_NAME,BANK_TYPE, BANK_LOGO, BANK_LOGO
 	</sql>
+    <select id="listBankColorIn"  resultMap="BaseResultMap">
+        select * from
+        <include refid="table"/>
+        <where>
+            TYPE_CODE = #{typeCode} and  BANK_LOGO in
+            <foreach collection="list" item="list" index="index"
+                     open="(" close=")" separator=",">
+                #{list}
+            </foreach>
+        </where>
+    </select>
+
     <select id="listBankColor" parameterType="java.util.Map" resultMap="BaseResultMap">
         select * from
         <include refid="table"/>

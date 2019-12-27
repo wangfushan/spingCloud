@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.entity.RemitBankColor;
 import com.example.demo.mapper.RemitBankColorMapper;
+import io.lettuce.core.dynamic.annotation.Param;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,11 @@ public class RemitBankColorService {
         return remitBankColorMapper.listBankColor(map);
     }
 
+
+    public List<RemitBankColor> listRemit(String typeCode,List <String>list) {
+
+        return remitBankColorMapper.listBankColorIn(typeCode,list);
+    }
 
     public Map<String, Object> list(String typeCode) {
         Example example = new Example(RemitBankColor.class);

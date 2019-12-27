@@ -46,6 +46,16 @@ public class RemitBankColorController {
         return remitBankColorService.listRemit(map);
     }
 
+
+    @PostMapping(value = "/listBankColorIn")
+    public List<RemitBankColor> listBankColorIn(@RequestParam("typeCode") String typeCode,@RequestParam("a")String a,@RequestParam("b")String b) {
+
+        List<String> list=new ArrayList<>();
+        list.add(a);
+        list.add(b);
+        return remitBankColorService.listRemit(typeCode,list);
+    }
+
     @PostMapping(value = "/getList")
     public Map<String, Object> getList(String typeCode) {
 
@@ -61,6 +71,9 @@ public class RemitBankColorController {
             return map;
         }
     }
+
+
+
 
     @PostMapping(value = "/getList1")
     public Map<String, Object> getList1(String typeCode) {
