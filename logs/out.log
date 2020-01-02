@@ -1,575 +1,56 @@
-2019-12-27 15:12:03.470 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:07.500 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-27 15:12:07.506 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2019-12-27 15:12:07.563 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 Redis repository interfaces.
-2019-12-27 15:12:07.781 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-27 15:12:08.128 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2019-12-27 15:12:08.195 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=3411fcdc-b3d7-3099-80a3-e1c1dba0d1a9
-2019-12-27 15:12:08.335 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-27 15:12:08.349 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-27 15:12:08.369 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-27 15:12:08.465 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$12e64adc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.733 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.744 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.773 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.785 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.786 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.830 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.842 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.843 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:08.887 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:12:09.135 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8363 (http)
-2019-12-27 15:12:09.287 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 5498 ms
-2019-12-27 15:12:09.383 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:12:12.142 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
-2019-12-27 15:12:12.917 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:12:13.394 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 15:12:13.625 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-12-27 15:12:14.223 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
-2019-12-27 15:12:14.629 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2019-12-27 15:12:14.798 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2019-12-27 15:12:14.811 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-27 15:12:15.025 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
-2019-12-27 15:12:15.214 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 15:12:15.214 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-27 15:12:15.214 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
-2019-12-27 15:12:15.229 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
-2019-12-27 15:12:17.161 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
-2019-12-27 15:12:17.166 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
-2019-12-27 15:12:17.283 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8363 (http) with context path ''
-2019-12-27 15:12:17.284 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8363
-2019-12-27 15:14:51.995 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2019-12-27 15:14:52.005 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 10 ms
-2019-12-27 15:15:08.673 [http-nio-8363-exec-3] [TxId:,SpanId:] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-2019-12-27 15:15:23.434 [http-nio-8363-exec-4] [TxId:,SpanId:] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{bankLogo}' at line 3
-### The error may exist in file [E:\springCloudEureka\demo\target\classes\mapper\RemitBankColorMapper.xml]
-### The error may involve com.example.demo.mapper.RemitBankColorMapper.listBankColor-Inline
-### The error occurred while setting parameters
-### SQL: select * from           rp_remit_bank_color            WHERE TYPE_CODE = ? and BANK_LOGO in {bankLogo}
-### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{bankLogo}' at line 3
-; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{bankLogo}' at line 3] with root cause
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{bankLogo}' at line 3
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2490)
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
-	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:67)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:108)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at com.sun.proxy.$Proxy170.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy128.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
-	at com.sun.proxy.$Proxy130.listBankColor(Unknown Source)
-	at com.example.demo.service.RemitBankColorService.listRemit(RemitBankColorService.java:23)
-	at com.example.demo.controller.RemitBankColorController.listRemit(RemitBankColorController.java:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-12-27 15:15:55.518 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application SERVICE-DEMO3 with eureka with status DOWN
-2019-12-27 15:15:55.518 [SpringContextShutdownHook] [TxId:,SpanId:] WARN  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1577430955518, current=DOWN, previous=UP]
-2019-12-27 15:15:55.530 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 15:15:55.531 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-27 15:15:55.531 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : stopped bean '_org.springframework.integration.errorLogger'
-2019-12-27 15:15:55.534 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Shutting down ExecutorService 'taskScheduler'
-2019-12-27 15:15:55.539 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
-2019-12-27 15:15:55.546 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-12-27 15:16:04.456 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:05.506 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-27 15:16:05.508 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2019-12-27 15:16:05.548 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
-2019-12-27 15:16:05.656 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-27 15:16:05.810 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2019-12-27 15:16:05.876 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=3411fcdc-b3d7-3099-80a3-e1c1dba0d1a9
-2019-12-27 15:16:05.968 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-27 15:16:05.976 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-27 15:16:05.980 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-27 15:16:06.062 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$31d104cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.247 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.258 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.263 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.268 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.269 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.296 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.304 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.306 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.324 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:16:06.550 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8363 (http)
-2019-12-27 15:16:06.804 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2183 ms
-2019-12-27 15:16:06.890 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:16:08.091 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
-2019-12-27 15:16:08.374 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:16:08.548 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 15:16:08.711 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-12-27 15:16:09.068 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
-2019-12-27 15:16:09.246 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2019-12-27 15:16:09.340 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2019-12-27 15:16:09.351 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-27 15:16:09.437 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
-2019-12-27 15:16:09.547 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 15:16:09.547 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-27 15:16:09.547 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
-2019-12-27 15:16:09.557 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
-2019-12-27 15:16:10.369 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
-2019-12-27 15:16:10.373 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
-2019-12-27 15:16:10.434 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8363 (http) with context path ''
-2019-12-27 15:16:10.435 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8363
-2019-12-27 15:17:02.394 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2019-12-27 15:17:02.404 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 10 ms
-2019-12-27 15:17:29.763 [http-nio-8363-exec-3] [TxId:,SpanId:] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.demo.mapper.RemitBankColorMapper.listBankColorIn] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.demo.mapper.RemitBankColorMapper.listBankColorIn
-	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
-	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
-	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
-	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
-	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:97)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:92)
-	at com.sun.proxy.$Proxy130.listBankColorIn(Unknown Source)
-	at com.example.demo.service.RemitBankColorService.listRemit(RemitBankColorService.java:29)
-	at com.example.demo.controller.RemitBankColorController.listBankColorIn(RemitBankColorController.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-12-27 15:18:24.586 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application SERVICE-DEMO3 with eureka with status DOWN
-2019-12-27 15:18:24.587 [SpringContextShutdownHook] [TxId:,SpanId:] WARN  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1577431104587, current=DOWN, previous=UP]
-2019-12-27 15:18:24.592 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 15:18:24.593 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-27 15:18:24.593 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : stopped bean '_org.springframework.integration.errorLogger'
-2019-12-27 15:18:24.593 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Shutting down ExecutorService 'taskScheduler'
-2019-12-27 15:18:24.595 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
-2019-12-27 15:18:24.598 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-12-27 15:18:29.975 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:30.982 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-27 15:18:30.984 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2019-12-27 15:18:31.021 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
-2019-12-27 15:18:31.119 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-27 15:18:31.262 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2019-12-27 15:18:31.329 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=3411fcdc-b3d7-3099-80a3-e1c1dba0d1a9
-2019-12-27 15:18:31.422 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-27 15:18:31.430 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-27 15:18:31.434 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-27 15:18:31.515 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$7ddfb3ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.696 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.707 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.713 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.716 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.717 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.743 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.753 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.755 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:31.778 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:18:32.002 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8363 (http)
-2019-12-27 15:18:32.153 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2018 ms
-2019-12-27 15:18:32.241 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:18:33.285 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
-2019-12-27 15:18:33.568 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:18:33.734 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 15:18:33.891 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-12-27 15:18:34.253 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
-2019-12-27 15:18:34.425 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2019-12-27 15:18:34.521 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2019-12-27 15:18:34.533 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-27 15:18:34.631 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
-2019-12-27 15:18:34.774 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 15:18:34.774 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-27 15:18:34.775 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
-2019-12-27 15:18:34.782 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
-2019-12-27 15:18:35.704 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
-2019-12-27 15:18:35.710 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
-2019-12-27 15:18:35.774 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8363 (http) with context path ''
-2019-12-27 15:18:35.775 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8363
-2019-12-27 15:18:38.343 [http-nio-8363-exec-2] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2019-12-27 15:18:38.353 [http-nio-8363-exec-2] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 10 ms
-2019-12-27 15:18:44.397 [http-nio-8363-exec-2] [TxId:,SpanId:] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'array' not found. Available parameters are [list, param1, typeCode, param2]] with root cause
-org.apache.ibatis.binding.BindingException: Parameter 'array' not found. Available parameters are [list, param1, typeCode, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
-	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:120)
-	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:2719)
-	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:114)
-	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
-	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
-	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:493)
-	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:457)
-	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46)
-	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateIterable(ExpressionEvaluator.java:43)
-	at org.apache.ibatis.scripting.xmltags.ForEachSqlNode.apply(ForEachSqlNode.java:54)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
-	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:55)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
-	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39)
-	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:297)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:82)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at com.sun.proxy.$Proxy170.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy128.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
-	at com.sun.proxy.$Proxy130.listBankColorIn(Unknown Source)
-	at com.example.demo.service.RemitBankColorService.listRemit(RemitBankColorService.java:29)
-	at com.example.demo.controller.RemitBankColorController.listBankColorIn(RemitBankColorController.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-12-27 15:19:16.701 [http-nio-8363-exec-4] [TxId:,SpanId:] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'array' not found. Available parameters are [list, param1, typeCode, param2]] with root cause
-org.apache.ibatis.binding.BindingException: Parameter 'array' not found. Available parameters are [list, param1, typeCode, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
-	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:120)
-	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:2719)
-	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:114)
-	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
-	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
-	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:493)
-	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:457)
-	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46)
-	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateIterable(ExpressionEvaluator.java:43)
-	at org.apache.ibatis.scripting.xmltags.ForEachSqlNode.apply(ForEachSqlNode.java:54)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
-	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:55)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
-	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39)
-	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:297)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:82)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at com.sun.proxy.$Proxy170.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy128.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
-	at com.sun.proxy.$Proxy130.listBankColorIn(Unknown Source)
-	at com.example.demo.service.RemitBankColorService.listRemit(RemitBankColorService.java:29)
-	at com.example.demo.controller.RemitBankColorController.listBankColorIn(RemitBankColorController.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-12-27 15:20:07.934 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application SERVICE-DEMO3 with eureka with status DOWN
-2019-12-27 15:20:07.934 [SpringContextShutdownHook] [TxId:,SpanId:] WARN  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1577431207934, current=DOWN, previous=UP]
-2019-12-27 15:20:07.939 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 15:20:07.940 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-27 15:20:07.940 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : stopped bean '_org.springframework.integration.errorLogger'
-2019-12-27 15:20:07.941 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Shutting down ExecutorService 'taskScheduler'
-2019-12-27 15:20:07.943 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
-2019-12-27 15:20:07.946 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-12-27 15:20:13.327 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:14.348 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-27 15:20:14.350 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2019-12-27 15:20:14.388 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
-2019-12-27 15:20:14.488 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-27 15:20:14.639 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2019-12-27 15:20:14.704 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=3411fcdc-b3d7-3099-80a3-e1c1dba0d1a9
-2019-12-27 15:20:14.808 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-27 15:20:14.816 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-27 15:20:14.820 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-27 15:20:14.899 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$f7ce9e38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.084 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.095 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.100 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.104 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.104 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.130 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.139 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.140 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.160 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 15:20:15.379 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8363 (http)
-2019-12-27 15:20:15.508 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2016 ms
-2019-12-27 15:20:15.623 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:20:16.651 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
-2019-12-27 15:20:16.941 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
-2019-12-27 15:20:17.129 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 15:20:17.297 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-12-27 15:20:17.665 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
-2019-12-27 15:20:17.843 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2019-12-27 15:20:17.932 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2019-12-27 15:20:17.943 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-27 15:20:18.031 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
-2019-12-27 15:20:18.146 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 15:20:18.147 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-27 15:20:18.147 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
-2019-12-27 15:20:18.155 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
-2019-12-27 15:20:19.159 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
-2019-12-27 15:20:19.164 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
-2019-12-27 15:20:19.223 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8363 (http) with context path ''
-2019-12-27 15:20:19.224 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8363
-2019-12-27 15:20:20.170 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2019-12-27 15:20:20.182 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 12 ms
-2019-12-27 17:03:52.084 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application SERVICE-DEMO3 with eureka with status DOWN
-2019-12-27 17:03:52.086 [SpringContextShutdownHook] [TxId:,SpanId:] WARN  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1577437432086, current=DOWN, previous=UP]
-2019-12-27 17:03:52.103 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:123456@192.168.13.106:8360/eureka/}
-com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: 192.168.13.106:8360 failed to respond
+2020-01-02 14:03:21.295 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:22.747 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-02 14:03:22.750 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-01-02 14:03:22.813 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 Redis repository interfaces.
+2020-01-02 14:03:23.042 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-01-02 14:03:23.318 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-02 14:03:23.385 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=17c0af89-ec62-310f-9e4b-2d1e91e61d4b
+2020-01-02 14:03:23.700 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-01-02 14:03:23.714 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-01-02 14:03:23.720 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-01-02 14:03:23.800 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$b9350cfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.034 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.044 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.055 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.067 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.068 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.095 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.105 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.108 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.129 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:03:24.345 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8363 (http)
+2020-01-02 14:03:24.466 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 3011 ms
+2020-01-02 14:03:24.549 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-02 14:03:26.145 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
+2020-01-02 14:03:26.609 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-02 14:03:26.845 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-02 14:03:27.082 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-01-02 14:03:27.562 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-01-02 14:03:27.900 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-01-02 14:03:27.999 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-01-02 14:03:28.008 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-02 14:03:28.129 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
+2020-01-02 14:03:28.237 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-01-02 14:03:28.237 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-01-02 14:03:28.237 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
+2020-01-02 14:03:28.243 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+2020-01-02 14:03:29.229 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
+2020-01-02 14:03:29.233 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2020-01-02 14:03:29.337 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8363 (http) with context path ''
+2020-01-02 14:03:29.338 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8363
+2020-01-02 14:08:00.975 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2020-01-02 14:08:00.984 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 8 ms
+2020-01-02 14:08:01.041 [http-nio-8363-exec-1] [TxId:,SpanId:] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'name' is not present]
+2020-01-02 14:09:39.195 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application SERVICE-DEMO3 with eureka with status DOWN
+2020-01-02 14:09:39.195 [SpringContextShutdownHook] [TxId:,SpanId:] WARN  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1577945379195, current=DOWN, previous=UP]
+2020-01-02 14:09:39.198 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-01-02 14:09:39.199 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2020-01-02 14:09:39.199 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : stopped bean '_org.springframework.integration.errorLogger'
+2020-01-02 14:09:39.199 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Shutting down ExecutorService 'taskScheduler'
+2020-01-02 14:09:39.201 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2020-01-02 14:09:39.203 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-02 14:09:40.215 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:123456@192.168.13.106:8360/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
 	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
 	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
@@ -601,26 +82,294 @@ com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponse
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.http.NoHttpResponseException: 192.168.13.106:8360 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
-	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294)
-	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230)
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
 	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
 	... 30 common frames omitted
-2019-12-27 17:03:52.104 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient : Request execution failed with message: org.apache.http.NoHttpResponseException: 192.168.13.106:8360 failed to respond
-2019-12-27 17:03:52.111 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-27 17:03:52.112 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-27 17:03:52.112 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : stopped bean '_org.springframework.integration.errorLogger'
-2019-12-27 17:03:52.113 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Shutting down ExecutorService 'taskScheduler'
-2019-12-27 17:03:52.116 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
-2019-12-27 17:03:52.119 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-02 14:09:40.217 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-01-02 14:09:41.222 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:123456@192.168.13.106:8360/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 31 common frames omitted
+2020-01-02 14:09:41.223 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-01-02 14:09:41.225 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] WARN  com.netflix.discovery.DiscoveryClient : DiscoveryClient_SERVICE-DEMO3/DESKTOP-RGLJNDU:service-demo3:8363 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-02 14:09:41.226 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] WARN  com.netflix.discovery.InstanceInfoReplicator : There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-02 14:09:42.247 [SpringContextShutdownHook] [TxId:,SpanId:] ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:123456@192.168.13.106:8360/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:941)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 42 common frames omitted
+2020-01-02 14:09:42.249 [SpringContextShutdownHook] [TxId:,SpanId:] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-01-02 14:09:42.250 [SpringContextShutdownHook] [TxId:,SpanId:] ERROR com.netflix.discovery.DiscoveryClient : DiscoveryClient_SERVICE-DEMO3/DESKTOP-RGLJNDU:service-demo3:8363 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:941)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948)
+2020-01-02 14:13:28.167 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.139 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-02 14:13:29.141 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-01-02 14:13:29.176 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2020-01-02 14:13:29.271 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-01-02 14:13:29.409 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-02 14:13:29.475 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=17c0af89-ec62-310f-9e4b-2d1e91e61d4b
+2020-01-02 14:13:29.567 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-01-02 14:13:29.575 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-01-02 14:13:29.579 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-01-02 14:13:29.655 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$b48ff876] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.832 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.843 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.847 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.851 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.851 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.875 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.882 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.884 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:29.905 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:30.114 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8363 (http)
+2020-01-02 14:13:30.238 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1917 ms
+2020-01-02 14:13:30.321 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-02 14:13:31.299 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
+2020-01-02 14:13:31.633 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-02 14:13:31.791 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-02 14:13:31.975 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-01-02 14:13:32.323 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-01-02 14:13:32.498 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-01-02 14:13:32.583 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-01-02 14:13:32.594 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-02 14:13:32.671 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
+2020-01-02 14:13:32.772 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-01-02 14:13:32.772 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-01-02 14:13:32.773 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
+2020-01-02 14:13:32.779 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+2020-01-02 14:13:33.574 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
+2020-01-02 14:13:33.579 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2020-01-02 14:13:33.637 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8363 (http) with context path ''
+2020-01-02 14:13:33.638 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8363
+2020-01-02 14:13:42.475 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:43.458 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-02 14:13:43.460 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-01-02 14:13:43.496 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2020-01-02 14:13:43.597 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-01-02 14:13:43.750 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-02 14:13:43.816 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=17c0af89-ec62-310f-9e4b-2d1e91e61d4b
+2020-01-02 14:13:43.911 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-01-02 14:13:43.919 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-01-02 14:13:43.924 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-01-02 14:13:44.006 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$893ad864] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.130 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.140 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.144 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.148 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.148 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.226 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.234 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.235 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.256 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 14:13:44.464 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8369 (http)
+2020-01-02 14:13:44.589 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1962 ms
+2020-01-02 14:13:44.673 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-02 14:13:45.631 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
+2020-01-02 14:13:45.925 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-02 14:13:46.130 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-02 14:13:46.289 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-01-02 14:13:46.680 [main] [TxId:,SpanId:] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-01-02 14:13:46.855 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-01-02 14:13:46.940 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-01-02 14:13:46.949 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-02 14:13:47.033 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
+2020-01-02 14:13:47.129 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-01-02 14:13:47.129 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-01-02 14:13:47.130 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
+2020-01-02 14:13:47.136 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+2020-01-02 14:13:47.881 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
+2020-01-02 14:13:47.885 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2020-01-02 14:13:47.943 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8369 (http) with context path ''
+2020-01-02 14:13:47.944 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8369
+2020-01-02 14:19:47.361 [http-nio-8369-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2020-01-02 14:19:47.368 [http-nio-8369-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 6 ms
+2020-01-02 14:19:53.999 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2020-01-02 14:19:54.005 [http-nio-8363-exec-1] [TxId:,SpanId:] INFO  org.springframework.web.servlet.DispatcherServlet : Completed initialization in 6 ms

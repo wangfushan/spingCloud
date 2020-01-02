@@ -15,7 +15,7 @@ public class MySQLTestController {
 
 
     @RequestMapping("/home")
-    public String toHome(@RequestParam String name) {
+    public String toHome(@RequestParam(value = "name") String name) {
         return "hi, "+name+" i an come from"+port;
     }
 
