@@ -6,6 +6,7 @@ import com.example.demo.common.util.JsonHelper;
 import com.example.demo.common.util.MapUtil;
 import com.example.demo.entity.RemitBankColor;
 import com.example.demo.service.RemitBankColorService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,9 +21,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 @RestController
+@Slf4j
 @RequestMapping("/RemitBankColorController")
 public class RemitBankColorController {
 
@@ -37,6 +38,8 @@ public class RemitBankColorController {
 
     @Resource
     Redis1 redis1;
+
+
     @Autowired
     RedisTemplate<String,String> edisTemplate;
     @PostMapping(value = "/listBankColor")

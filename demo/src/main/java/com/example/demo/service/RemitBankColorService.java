@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.common.annotation.AspectColor;
 import com.example.demo.entity.RemitBankColor;
 import com.example.demo.mapper.RemitBankColorMapper;
 import io.lettuce.core.dynamic.annotation.Param;
@@ -17,7 +18,7 @@ import java.util.Map;
 public class RemitBankColorService {
     @Autowired
     private RemitBankColorMapper remitBankColorMapper;
-
+    @AspectColor
     public List<RemitBankColor> listRemit(Map<String, Object> map) {
 
         return remitBankColorMapper.listBankColor(map);

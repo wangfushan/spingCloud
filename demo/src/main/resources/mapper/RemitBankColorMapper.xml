@@ -33,6 +33,9 @@
         <include refid="table"/>
         <where>
             TYPE_CODE = #{typeCode}
+            <if test="bankName!=null">
+            and BANK_NAME=#{bankName}
+            </if>
         </where>
     </select>
 
