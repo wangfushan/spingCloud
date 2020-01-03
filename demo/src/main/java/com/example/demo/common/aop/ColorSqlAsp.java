@@ -27,17 +27,21 @@ public class ColorSqlAsp {
 
         log.info("添加sql****************");
         joinPoint.toString();
-        String a=joinPoint.getThis().toString();
-        log.info("添加sql 原参数为：{}",a);
+        String a = joinPoint.getThis().toString();
+        log.info("添加sql 原参数为：{}", a);
         try {
-                Object[] args=joinPoint.getArgs();//把参数分为数组
-            for (Object arg :args){
-                Map<String , Object> map= (Map<String, Object>) arg;
-               map.put("bankName","中国工商银行");
-                log.info("数据切面添加数据,map={}", JsonHelper.parseToJson(map));
+            Object[] args = joinPoint.getArgs();//把参数分为数组
+            for (Object arg : args) {
+                if (arg instanceof Map) {
+                    Map<String, Object> map = (Map<String, Object>) arg;
+                    map.put("bankName", "中国工商银行");
+                    log.info("数据切面添加数据,map={}", JsonHelper.parseToJson(map));
+                } else {
+                    return;
+                }
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             log.error("添加sql失败，切面数据异常");
         }
