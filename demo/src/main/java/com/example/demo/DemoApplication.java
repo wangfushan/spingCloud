@@ -10,10 +10,13 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Map;
 
 @SpringBootApplication
 @RestController
@@ -40,6 +43,11 @@ public class DemoApplication {
     @RequestMapping("/demo")
     public String getDemo(@RequestParam(name = "name")String name){
         return "端口号is："+port+"my name is"+name;
+    }
+
+    @RequestMapping("/demo1")
+    public String getDemo1(@RequestBody Map map){
+        return "端口号is："+port+"my name is"+map.get("name").toString();
     }
 
 }
