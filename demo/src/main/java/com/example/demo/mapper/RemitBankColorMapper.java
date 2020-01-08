@@ -16,4 +16,6 @@ public interface RemitBankColorMapper  extends MyMapper<RemitBankColor> {
 
     List<RemitBankColor> listBankColorIn( @Param("typeCode")String typeCode, @Param("list")List <String>list);
 
+     void saveList(List list);
+
 }

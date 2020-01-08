@@ -16,11 +16,11 @@
     <sql id="Base_Column_List">
 		ID,TYPE_CODE, BANK_NAME,BANK_TYPE, BANK_LOGO, BANK_LOGO
 	</sql>
-    <select id="listBankColorIn"  resultMap="BaseResultMap">
+    <select id="listBankColorIn" resultMap="BaseResultMap">
         select * from
         <include refid="table"/>
         <where>
-            TYPE_CODE = #{typeCode} and  BANK_LOGO in
+            TYPE_CODE = #{typeCode} and BANK_LOGO in
             <foreach collection="list" item="list" index="index"
                      open="(" close=")" separator=",">
                 #{list}
@@ -34,19 +34,35 @@
         <where>
             TYPE_CODE = #{typeCode}
             <if test="bankName!=null">
-            and BANK_NAME=#{bankName}
+                and BANK_NAME=#{bankName}
             </if>
         </where>
     </select>
 
+    <insert id="saveList" parameterType="java.util.List">
 
-<!--    <insert id="insert" parameterType="com.roncoo.pay.bank.entity.RemitBankColor">
-        insert into
-        <include refid="table"/>
-        (ID,TYPE_CODE, BANK_NAME,BANK_TYPE,RGB, BANK_LOGO)
-        values (#{id,jdbcType=VARCHAR},#{typeCode,jdbcType=VARCHAR},#{bankName,jdbcType=VARCHAR},
-        #{bankType,jdbcType=VARCHAR}, #{rgb,jdbcType=VARCHAR}, #{bankLogo,jdbcType=VARCHAR})
+        insert into rp_remit_bank_color (ID,TYPE_CODE,BANK_TYPE,RGB,BANK_NAME,BANK_LOGO)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.id},
+            #{item.typeCode},
+            #{item.bankType},
+            #{item.rgb},
+            #{item.bankName},
+            #{item.bankLogo}
+            )
+        </foreach>
+    </insert>
 
-    </insert>-->
+
+    <!--    <insert id="insert" parameterType="com.roncoo.pay.bank.entity.RemitBankColor">
+            insert into
+            <include refid="table"/>
+            (ID,TYPE_CODE, BANK_NAME,BANK_TYPE,RGB, BANK_LOGO)
+            values (#{id,jdbcType=VARCHAR},#{typeCode,jdbcType=VARCHAR},#{bankName,jdbcType=VARCHAR},
+            #{bankType,jdbcType=VARCHAR}, #{rgb,jdbcType=VARCHAR}, #{bankLogo,jdbcType=VARCHAR})
+
+        </insert>-->
 
 </mapper>
