@@ -11,6 +11,7 @@
         <module name="test" />
         <module name="eurekaservice" />
         <module name="feign" />
+        <module name="mqproject" />
         <module name="eurekaserver" />
       </profile>
     </annotationProcessing>
@@ -24,6 +25,7 @@
       <module name="eurekaserver" options="-parameters" />
       <module name="eurekaservice" options="-parameters" />
       <module name="feign" options="-parameters" />
+      <module name="mqproject" options="-parameters" />
       <module name="test" options="-parameters" />
       <module name="zuul" options="-parameters" />
     </option>

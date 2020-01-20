@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/test/pom.xml" />
         <option value="$PROJECT_DIR$/feign/pom.xml" />
         <option value="$PROJECT_DIR$/zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/mqproject/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

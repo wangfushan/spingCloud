@@ -2601,3 +2601,92 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029)
 	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948)
 2020-01-09 17:34:17.294 [SpringContextShutdownHook] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Completed shut down of DiscoveryClient
+2020-01-20 15:00:53.333 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:53.501 [main] [TxId:,SpanId:] INFO  com.example.demo.DemoApplication : No active profile set, falling back to default profiles: default
+2020-01-20 15:00:54.495 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-20 15:00:54.498 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-01-20 15:00:54.536 [main] [TxId:,SpanId:] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2020-01-20 15:00:54.653 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-01-20 15:00:54.716 [main] [TxId:,SpanId:] WARN  org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-01-20 15:00:54.815 [main] [TxId:,SpanId:] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-20 15:00:54.885 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.context.scope.GenericScope : BeanFactory id=aeeedc5a-c21d-3b74-977a-1335d0c9ba6b
+2020-01-20 15:00:54.983 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-01-20 15:00:54.991 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-01-20 15:00:54.996 [main] [TxId:,SpanId:] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-01-20 15:00:55.170 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBaitsConfig' of type [com.example.demo.common.db.MyBaitsConfig$$EnhancerBySpringCGLIB$$c6276686] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.364 [MLog-Init-Reporter] [TxId:,SpanId:] INFO  com.mchange.v2.log.MLog : MLog clients using slf4j logging.
+2020-01-20 15:00:55.415 [main] [TxId:,SpanId:] INFO  com.mchange.v2.c3p0.C3P0Registry : Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020-01-20 15:00:55.479 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource1' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.537 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.547 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.552 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.556 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.609 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.635 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.638 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.673 [main] [TxId:,SpanId:] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-20 15:00:55.946 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8363 (http)
+2020-01-20 15:00:55.955 [main] [TxId:,SpanId:] INFO  org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8363"]
+2020-01-20 15:00:55.955 [main] [TxId:,SpanId:] INFO  org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2020-01-20 15:00:55.955 [main] [TxId:,SpanId:] INFO  org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-20 15:00:56.078 [main] [TxId:,SpanId:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2020-01-20 15:00:56.078 [main] [TxId:,SpanId:] INFO  org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2556 ms
+2020-01-20 15:00:56.200 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-20 15:00:56.200 [main] [TxId:,SpanId:] INFO  com.netflix.config.sources.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-20 15:00:56.210 [main] [TxId:,SpanId:] INFO  com.netflix.config.DynamicPropertyFactory : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@70cf7d1e
+2020-01-20 15:00:58.040 [main] [TxId:,SpanId:] INFO  com.example.demo.common.redis.RedisClientPool : ****初始化Redis客户端****
+2020-01-20 15:00:58.041 [main] [TxId:,SpanId:] INFO  com.example.demo.common.redis.RedisClientPool : Redis服务器地址：172.28.250.211:6379
+2020-01-20 15:00:58.103 [main] [TxId:,SpanId:] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.data.redis.core.RedisTemplate com.example.demo.controller.RemitBankColorController.redisTemplate
+2020-01-20 15:00:58.902 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-20 15:00:59.037 [main] [TxId:,SpanId:] WARN  com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2020-01-20 15:00:59.037 [main] [TxId:,SpanId:] INFO  com.netflix.config.sources.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-20 15:01:00.464 [main] [TxId:,SpanId:] INFO  org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2020-01-20 15:01:00.486 [main] [TxId:,SpanId:] INFO  org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-20 15:01:00.487 [main] [TxId:,SpanId:] INFO  org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2020-01-20 15:01:00.488 [main] [TxId:,SpanId:] INFO  org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2020-01-20 15:01:00.489 [main] [TxId:,SpanId:] INFO  org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-20 15:01:00.489 [main] [TxId:,SpanId:] INFO  org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-20 15:01:00.489 [main] [TxId:,SpanId:] INFO  org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2020-01-20 15:01:00.489 [main] [TxId:,SpanId:] INFO  org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@467421cc
+2020-01-20 15:01:00.681 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-01-20 15:01:01.016 [main] [TxId:,SpanId:] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-01-20 15:01:01.035 [main] [TxId:,SpanId:] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-20 15:01:01.218 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler : Initializing ExecutorService 'taskScheduler'
+2020-01-20 15:01:01.360 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-01-20 15:01:01.360 [main] [TxId:,SpanId:] INFO  org.springframework.integration.channel.PublishSubscribeChannel : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-01-20 15:01:01.360 [main] [TxId:,SpanId:] INFO  org.springframework.integration.endpoint.EventDrivenConsumer : started bean '_org.springframework.integration.errorLogger'
+2020-01-20 15:01:01.368 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+2020-01-20 15:01:01.401 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Initializing Eureka in region us-east-1
+2020-01-20 15:01:01.487 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON encoding codec LegacyJacksonJson
+2020-01-20 15:01:01.488 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON decoding codec LegacyJacksonJson
+2020-01-20 15:01:01.597 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML encoding codec XStreamXml
+2020-01-20 15:01:01.597 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML decoding codec XStreamXml
+2020-01-20 15:01:01.811 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver : Resolving eureka endpoints via configuration
+2020-01-20 15:01:01.843 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Disable delta property : false
+2020-01-20 15:01:01.843 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Single vip registry refresh property : null
+2020-01-20 15:01:01.843 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Force full registry fetch : false
+2020-01-20 15:01:01.843 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Application is null : false
+2020-01-20 15:01:01.843 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Registered Applications size is zero : true
+2020-01-20 15:01:01.843 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Application version is -1: true
+2020-01-20 15:01:01.843 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Getting all instance registry info from the eureka server
+2020-01-20 15:01:02.328 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : The response status is 200
+2020-01-20 15:01:02.330 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Starting heartbeat executor: renew interval is: 30
+2020-01-20 15:01:02.331 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.InstanceInfoReplicator : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-01-20 15:01:02.335 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Discovery Client initialized at timestamp 1579503662334 with initial instances count: 0
+2020-01-20 15:01:02.342 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application SERVICE-DEMO3 with eureka with status UP
+2020-01-20 15:01:02.343 [main] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1579503662343, current=UP, previous=STARTING]
+2020-01-20 15:01:02.345 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : DiscoveryClient_SERVICE-DEMO3/DESKTOP-RGLJNDU:service-demo3:8363: registering service...
+2020-01-20 15:01:02.345 [main] [TxId:,SpanId:] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2020-01-20 15:01:02.345 [main] [TxId:,SpanId:] INFO  org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-20 15:01:02.390 [main] [TxId:,SpanId:] INFO  org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8363"]
+2020-01-20 15:01:02.416 [main] [TxId:,SpanId:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8363 (http) with context path ''
+2020-01-20 15:01:02.418 [main] [TxId:,SpanId:] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8363
+2020-01-20 15:01:02.446 [DiscoveryClient-InstanceInfoReplicator-0] [TxId:,SpanId:] INFO  com.netflix.discovery.DiscoveryClient : DiscoveryClient_SERVICE-DEMO3/DESKTOP-RGLJNDU:service-demo3:8363 - registration status: 204
+2020-01-20 15:01:02.459 [main] [TxId:,SpanId:] INFO  com.example.demo.DemoApplication : Started DemoApplication in 10.081 seconds (JVM running for 11.672)
