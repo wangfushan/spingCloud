@@ -56,15 +56,15 @@ public class RemitBankColorController {
     public void smsSend(){
     /*    SmsSandSendPo a=new SmsSandSendPo("15093261560","张碗 大瓷碗");
         SmsSendUtil b=new SmsSendUtil();*/
-        notifyServiceThreadPool.execute(new TSmsSandService(new SmsSandSendPo("15093261560", "张碗 大瓷碗")));
+        notifyServiceThreadPool.execute(new TSmsSandService(new SmsSandSendPo("15036314048", " 我先回家看看能不能充气 能的话就做 不能就点外卖吧！")));
     }
     @PostMapping(value = "/listBankColor")
-    public List<RemitBankColor> listRemit(@RequestParam("typeCode") String typeCode) {
+    public void listRemit(@RequestParam("typeCode") String typeCode) {
         RestTemplateConfig restTemplateConfig = new RestTemplateConfig();
         RestTemplate restTemplate = restTemplateConfig.restTemplate();
         Map<String, Object> map = new HashMap<>();
         map.put("typeCode", typeCode);
-        return remitBankColorService.listRemit(map);
+         remitBankColorService.runv1();
     }
 
     @PostMapping(value = "/sevaList")

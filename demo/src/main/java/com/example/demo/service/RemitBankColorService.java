@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.common.annotation.AspectColor;
 import com.example.demo.common.util.RestTemplateHelper;
 import com.example.demo.common.util.RestTemplateHelperV2;
+import com.example.demo.common.util.ThreadExecutor;
 import com.example.demo.entity.RemitBankColor;
 import com.example.demo.mapper.RemitBankColorMapper;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -17,6 +18,9 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
+
+import static java.lang.Thread.sleep;
 
 @Slf4j
 @Service
@@ -30,6 +34,43 @@ public class RemitBankColorService {
     public List<RemitBankColor> listRemit(Map<String, Object> map) {
 
         return remitBankColorMapper.listBankColor(map);
+    }
+
+    static Object ob = "aa";//同步锁
+
+
+    static int tick=0;
+    public void runv1() {
+
+        ThreadExecutor th = ThreadExecutor.create();
+        th.run(new Runnable() {
+            @Override
+            public void run() {
+                Map<String, Object> map = new HashMap<>();
+                map.put("typeCode", "102");
+                 tick = remitBankColorMapper.listBankColor(map).size();//保证票数一致
+                System.out.println(tick);
+                Random random = new Random();//随机数种子为系统时间
+                int bb=random.nextInt();
+                while (tick > 0) {
+                    synchronized (ob) {
+                        if (tick > 0) {
+                            System.out.println("卖出第" + tick + "张票！"+bb);
+                            tick--;
+                        } else {
+                            System.out.println("票卖完了！");
+                        }
+                    }
+                    try {
+                        sleep(100);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
     }
 
 
@@ -50,6 +91,16 @@ public class RemitBankColorService {
             map.put("a", list);
         }
         return map;
+    }
+
+    public int getList(){
+        Example example = new Example(RemitBankColor.class);
+        Example.Criteria criteria=example.createCriteria();
+        criteria.andEqualTo("typeCode","102");
+        int a =1;
+         a=remitBankColorMapper.selectCountByExample(example);
+        return a;
+
     }
 
     public void saveList(List list){
