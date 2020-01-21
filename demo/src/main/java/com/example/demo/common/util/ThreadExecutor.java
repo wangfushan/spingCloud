@@ -9,7 +9,7 @@ public class ThreadExecutor extends ThreadPoolExecutor {
 	private static int queueSize = 20;
 
 	private ThreadExecutor() {
-		super(10, 50, 120, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(queueSize),
+		super(20, 150, 120, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(queueSize),
 				new CallerRunsPolicy());
 	}
 
