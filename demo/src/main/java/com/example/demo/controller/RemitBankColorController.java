@@ -56,7 +56,7 @@ public class RemitBankColorController {
     public void smsSend(){
     /*    SmsSandSendPo a=new SmsSandSendPo("15093261560","张碗 大瓷碗");
         SmsSendUtil b=new SmsSendUtil();*/
-        notifyServiceThreadPool.execute(new TSmsSandService(new SmsSandSendPo("15036314048", " 我先回家看看能不能充气 能的话就做 不能就点外卖吧！")));
+        notifyServiceThreadPool.execute(new TSmsSandService(new SmsSandSendPo("18568507564", "傻货 在家干啥了 家里不是解禁了？没出去浪啊？猜猜我是谁 别回短信  回微信")));
     }
     @PostMapping(value = "/listBankColor")
     public void listRemit(@RequestParam("typeCode") String typeCode) {
@@ -244,17 +244,17 @@ public class RemitBankColorController {
     @PostMapping(value = "/getList2")
     public List getList2(String typeCode) {
 
-        if (redis1.exists("11")) {
-            return (List) redis1.get("11");
+        if (redis1.exists("111")) {
+            return (List) redis1.get("111");
         } else {
             Map<String, Object> map = remitBankColorService.list(typeCode);
             // template.opsForHash().putAll("myCache",map);
             List list = new ArrayList();
-            list.add(map.get("bankName"));
+            list.add(map.get("a"));
             list.add(1);
             list.add(1);
             list.add(1);
-            redis1.save("11", list, 111);
+            redis1.save("111", list, 111);
             return list;
         }
     }
