@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import com.example.demo.common.config.RabbitMqConfig;
 import com.example.demo.common.config.RestTemplateConfig;
 import com.example.demo.common.redis.Redis1;
 import com.example.demo.common.util.*;
@@ -10,6 +11,7 @@ import com.example.demo.service.RemitBankColorService;
 import com.example.demo.service.TSmsSandService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.MapUtils;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -58,6 +60,9 @@ public class RemitBankColorController {
         SmsSendUtil b=new SmsSendUtil();*/
         notifyServiceThreadPool.execute(new TSmsSandService(new SmsSandSendPo("18568507564", "傻货 在家干啥了 家里不是解禁了？没出去浪啊？猜猜我是谁 别回短信  回微信")));
     }
+
+
+
     @PostMapping(value = "/listBankColor")
     public void listRemit(@RequestParam("typeCode") String typeCode) {
         RestTemplateConfig restTemplateConfig = new RestTemplateConfig();

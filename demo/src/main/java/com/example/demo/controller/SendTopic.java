@@ -27,6 +27,7 @@ public static final  String EXCHEGE_NAME="test_exchange_Topic";
 
         //String routingKey="goods.add";
         //发送消息到交换机
+        //BasicProperties props -- 消息的基本属性，例如路由头等
         channel.basicPublish(EXCHEGE_NAME,routingKey,null,msg.getBytes());
 
         System.out.println(msg+"send");

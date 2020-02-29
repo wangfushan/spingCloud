@@ -79,7 +79,7 @@ public static final  String QUEUE_NAME="test_name_confirm3";
        }
 
        channel.close();
-       connection.close();;
+       connection.close();
 
     }
 
