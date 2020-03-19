@@ -7,6 +7,7 @@ import com.example.demo.common.redis.Redis1;
 import com.example.demo.common.util.*;
 import com.example.demo.common.vo.SmsSandSendPo;
 import com.example.demo.entity.RemitBankColor;
+import com.example.demo.rabbitMq.easyMQ.publisher;
 import com.example.demo.service.RemitBankColorService;
 import com.example.demo.service.TSmsSandService;
 import lombok.extern.slf4j.Slf4j;
@@ -44,6 +45,8 @@ public class RemitBankColorController {
     @Autowired
     private static RedisTemplate redisTemplate;
 
+    @Autowired
+    private publisher publisher;
     @Resource
     Redis1 redis1;
     @Autowired
@@ -236,12 +239,13 @@ public class RemitBankColorController {
         if (redis1.exists("11")) {
             Map<Object, Object> resultMap = (Map<Object, Object>) redis1.get("11");
             String a = JsonHelper.parseToJson(resultMap);
+            publisher.send();
             return JsonHelper.parseToMap(a);
         } else {
             Map<String, Object> map = remitBankColorService.list(typeCode);
             // template.opsForHash().putAll("myCache",map);
             redis1.save("11", map, 111);
-
+            publisher.send();
             return map;
         }
     }
