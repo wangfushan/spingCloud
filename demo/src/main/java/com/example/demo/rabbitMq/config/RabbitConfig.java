@@ -1,4 +1,4 @@
-package com.example.demo.rabbitMq;
+package com.example.demo.rabbitMq.config;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
@@ -19,4 +19,14 @@ public class RabbitConfig {
     public Queue queue2(){
         return new Queue("test_queue2");
     }
+
+    @Bean
+    public Queue queue3(){
+        return new Queue("test_queue3");
+    }
+    @Bean
+    public Queue queue4(){
+        return new Queue("test_queue4");
+    }
+
 }
