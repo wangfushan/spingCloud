@@ -5,6 +5,8 @@ import com.example.demo.common.util.AlipayUtil;
 import com.example.demo.common.util.JsonHelper;
 import com.example.demo.common.util.RestTemplateHelperV2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,11 +39,11 @@ public class RsaTest {
                "9VZUYSMcqOd9DWVOIDGfNB5f13aXlwgtldp6koUrhX+8vHE5uXmNwv00ZFiHPxVer6G5AoGBAIpR4btksEEDOxyuPQgXhRsB7hXsJ4xvmtr0AMPeafWau5Sfo9" +
                "75v0mYKvkVax5PBoz8xVTMvisEWdTuX7g0TYy7zLhpwEDK1bh83Nu09tPgW3jOL8HT0aaanqE6tvMogmvNFHxQtvN1FTvnzlaTIwtpllL2tag3cSKwpDwGq9NX";
         Map<String,String> map=new HashMap<>();
-        map= JsonHelper.parseToMap(data);
+      map.put("ss",data);
 
         //map转treeMap  排序
         Map<String, String> reqContent = new HashMap<String, String>();
-        reqContent.put("version","1.0"); //调用的接口版本，固定为：1.0
+        reqContent.put("name","1.0"); //调用的接口版本，固定为：1.0
         reqContent.put("charset", "utf-8"); //请求使用的编码格式
         reqContent.put("signType", "RSA2");
         reqContent.put("timestamp", new Date().toString()); //发送请求的时间，格式"yyyy-MM-dd HH:mm:ss
@@ -53,10 +55,11 @@ public class RsaTest {
         reqContent.remove("bizContent");
         Map<String,Object> map1=new HashMap<>();
         map1.putAll(reqContent);
-        map1.put("bizContent",map);
+      //  map1.put("bizContent",map);
        //
         String a = restTemplate.postForObject("http://service-feign/RemitBankColorController/getService1", RestTemplateHelperV2.postForm1(map1), String.class);
-
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         return a;
     }
 

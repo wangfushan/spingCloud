@@ -27,7 +27,8 @@ public class RestTemplateHelperV2 {
 
 	public  static MultiValueMap postForm1(Map<String, Object> map1) throws RestClientException {
 		Map<String,String> map=new HashMap<>();
-		map.putAll(map);
+		String date=JsonHelper.parseToJson(map1);
+		map=JsonHelper.parseToMap(date);
 		MultiValueMap<String, String> requestEntity = new LinkedMultiValueMap<>();
 		if (MapUtils.isNotEmpty(map)) {
 			map.forEach(requestEntity::set);

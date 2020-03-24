@@ -280,6 +280,11 @@
             <artifactId>activemq-all</artifactId>
             <version>5.11.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.7</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
