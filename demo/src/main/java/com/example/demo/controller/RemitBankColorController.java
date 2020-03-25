@@ -26,10 +26,8 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RestController
 @Slf4j
@@ -58,13 +56,48 @@ public class RemitBankColorController {
 
 
     @PostMapping(value = "/aaa")
-    public void smsSend(){
+    public void smsSend() {
     /*    SmsSandSendPo a=new SmsSandSendPo("15093261560","张碗 大瓷碗");
         SmsSendUtil b=new SmsSendUtil();*/
         notifyServiceThreadPool.execute(new TSmsSandService(new SmsSandSendPo("18568507564", "傻货 在家干啥了 家里不是解禁了？没出去浪啊？猜猜我是谁 别回短信  回微信")));
     }
 
 
+    @PostMapping(value = "/now")
+    public String async() {
+
+        Date date = new Date();
+
+        try {
+            String aa = remitBankColorService.aasync(date);
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String dateString = formatter.format(date);
+            Date date1 = new Date();
+            String dateString1 = formatter.format(date1);
+            return dateString+":---------:"+dateString1;
+        } catch (InterruptedException e) {
+            return "报错";
+        }
+
+    }
+
+    @PostMapping(value = "/async")
+    public String async1() {
+
+        Date date = new Date();
+
+        try {
+            String aa = remitBankColorService.aasynca(date);
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String dateString = formatter.format(date);
+            Date date1 = new Date();
+            String dateString1 = formatter.format(date1);
+            return dateString+":---------:"+dateString1;
+        } catch (InterruptedException e) {
+            return "报错";
+        }
+
+    }
 
     @PostMapping(value = "/listBankColor")
     public void listRemit(@RequestParam("typeCode") String typeCode) {
@@ -72,7 +105,7 @@ public class RemitBankColorController {
         RestTemplate restTemplate = restTemplateConfig.restTemplate();
         Map<String, Object> map = new HashMap<>();
         map.put("typeCode", typeCode);
-         remitBankColorService.runv1();
+        remitBankColorService.runv1();
     }
 
     @PostMapping(value = "/sevaList")

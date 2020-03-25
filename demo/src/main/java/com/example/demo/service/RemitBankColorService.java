@@ -11,14 +11,13 @@ import com.netflix.ribbon.proxy.annotation.Hystrix;
 import io.lettuce.core.dynamic.annotation.Param;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import static java.lang.Thread.sleep;
 
@@ -121,5 +120,23 @@ public class RemitBankColorService {
     }
 
 
+    @Async
+    public String  aasync(Date date) throws InterruptedException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateString = formatter.format(date);
+        Thread.sleep(3000);
+        Date date1 = new Date();
+        String dateString1 = formatter.format(date1);
+        return dateString+":---------:"+dateString1;
+    }
+
+    public String  aasynca(Date date) throws InterruptedException  {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateString = formatter.format(date);
+        Thread.sleep(3000);
+        Date date1 = new Date();
+        String dateString1 = formatter.format(date1);
+        return dateString+":---------:"+dateString1;
+    }
 
 }
