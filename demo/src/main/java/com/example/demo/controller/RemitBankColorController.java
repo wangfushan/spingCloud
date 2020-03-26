@@ -38,17 +38,12 @@ public class RemitBankColorController {
     private RemitBankColorService remitBankColorService;
     @Autowired
     RedisTemplate<String, String> stringRedisTemplate;
-    @Autowired
-    private RedisTemplate<Object, Object> template;
-    @Autowired
-    private static RedisTemplate redisTemplate;
+
 
     @Autowired
     private publisher publisher;
     @Resource
     Redis1 redis1;
-    @Autowired
-    RedisTemplate<String, String> edisTemplate;
     @Autowired
     private ThreadPoolTaskExecutor notifyServiceThreadPool;
     @Autowired
@@ -201,13 +196,22 @@ public class RemitBankColorController {
         Map<String, String> map = new HashMap<>();
         map.put("name", "name");
         String name = "name";
-        RestTemplateConfig bb = new RestTemplateConfig();
-        RestTemplate cc = bb.restTemplate();
+        RestTemplate cc = RestTemplateConfig.restTemplate();
         String a = cc.getForObject("https://httpbin.org/anything", String.class, map);
         // String a=getForm("https://httpbin.org/anything",map);
         return a;
     }
 
+    @PostMapping(value = "/getFeign41")
+    public String getFeign41() {
+        Map<String, String> map = new HashMap<>();
+        map.put("name", "name");
+        String name = "name";
+        RestTemplate cc = RestTemplateConfig.restTemplate();
+        String a=cc.postForObject("http://192.168.13.209:8080/gateway/appPayment/payMent",map,String.class);
+        // String a=getForm("https://httpbin.org/anything",map);
+        return a;
+    }
 
     public String getForm(String url, Map<String, String> map) {
         if (MapUtils.isNotEmpty(map)) {
@@ -289,10 +293,10 @@ public class RemitBankColorController {
         if (redis1.exists("111")) {
             return (List) redis1.get("111");
         } else {
-            Map<String, Object> map = remitBankColorService.list(typeCode);
+            //Map<String, Object> map = remitBankColorService.list(typeCode);
             // template.opsForHash().putAll("myCache",map);
             List list = new ArrayList();
-            list.add(map.get("a"));
+            //bulist.add(map.get("a"));
             list.add(1);
             list.add(1);
             list.add(1);

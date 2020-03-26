@@ -28,11 +28,12 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 @Slf4j
+@Configuration
 public class RestTemplateConfig {
 
 
     @Bean
-    public RestTemplate restTemplate() {
+    public static RestTemplate restTemplate() {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setRequestFactory(clientHttpRequestFactory());
         restTemplate.setErrorHandler(new DefaultResponseErrorHandler());
@@ -40,7 +41,7 @@ public class RestTemplateConfig {
     }
 
     @Bean
-    public HttpComponentsClientHttpRequestFactory clientHttpRequestFactory() {
+    public static HttpComponentsClientHttpRequestFactory clientHttpRequestFactory() {
         try {
             HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
             SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
