@@ -26,6 +26,10 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import javax.sql.rowset.serial.SerialBlob;
+import java.io.UnsupportedEncodingException;
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -141,7 +145,7 @@ public class RemitBankColorController {
     }*/
 
 
-    @PostMapping(value = "/getFeign")
+        @PostMapping(value = "/getFeign")
     public String getFeign() {
         Map<String, String> map = new HashMap<>();
         map.put("name", "name");
@@ -175,10 +179,10 @@ public class RemitBankColorController {
     public String getFeign7() {
         Map<String, String> map = new HashMap<>();
         map.put("name", "name");
-        String name = "name";
 
-        String a = getForm("http://service-feign/RemitBankColorController/getService1", map);
-        return a;
+        RestTemplate cc = RestTemplateConfig.restTemplate();
+        String data=cc.postForObject("http://service-feign/RemitBankColorController/getService1",map,String.class);
+        return data;
     }
    /* @PostMapping(value = "/getFeign4")
     public String getFeign4(){
@@ -208,9 +212,31 @@ public class RemitBankColorController {
         map.put("name", "name");
         String name = "name";
         RestTemplate cc = RestTemplateConfig.restTemplate();
-        String a=cc.postForObject("http://192.168.13.209:8080/gateway/appPayment/payMent",map,String.class);
-        // String a=getForm("https://httpbin.org/anything",map);
-        return a;
+        String data=cc.postForObject("http://192.168.13.209:8080/gateway/appPayment/payMent",map,String.class);
+        if (data.isEmpty()){
+            return null;
+        }else {
+
+            Map<String,Object> map1=JsonHelper.parseToMap(data);
+            String id=map1.get("id").toString();
+            String zjhm=map1.get("zjhm").toString();
+            String zp=map1.get("zp").toString();
+            String zprq=map1.get("zprq").toString();
+            String sjgxsj=map1.get("sjgxsj").toString();
+            String photo_no=map1.get("photo_no").toString();
+            String jlrksj=map1.get("jlrksj").toString();
+            String rid=map1.get("rid").toString();
+            Blob b=null;
+            try {
+               b = new SerialBlob(zp.getBytes("GBK"));//String 转 blob
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            return  "接下把数据入库就行了 ";
+
+        }
     }
 
     public String getForm(String url, Map<String, String> map) {

@@ -51,6 +51,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <version>1.4.2.RELEASE</version>
         </dependency>
 
         <!--断路器仪表盘依赖-->
