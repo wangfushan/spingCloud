@@ -13,7 +13,7 @@ import javax.jms.Session;
 
 @Component
 @Log4j2
-public class WorkQueue {
+public class workQueue {
 
 
     @Autowired
