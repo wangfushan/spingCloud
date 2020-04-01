@@ -207,7 +207,22 @@
             <version>2.2.0.RELEASE</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>3.4.27.ALL</version>
+        </dependency>
 
+        <dependency>
+            <groupId>alipay</groupId>
+            <artifactId>alipay-trade-sdk</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>alipay_rsa_sign_tools</artifactId>
+            <version>1.0</version>
+        </dependency>
 
        <!-- !&#45;&#45;文件上传组件&ndash;&gt;-->
         <dependency>

@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 
 import com.example.demo.rabbitMq.easyMQ.publisher;
-import com.example.demo.rabbitMq.workQueue.WorkQueue;
+import com.example.demo.rabbitMq.workQueue.workQueue;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +21,7 @@ public class ConsumerController {
     @Autowired
     private publisher publisher;
     @Autowired
-    private WorkQueue worPpublisher;
+    private workQueue worPpublisher;
 
 
     @PostMapping(value = "/aaa")
