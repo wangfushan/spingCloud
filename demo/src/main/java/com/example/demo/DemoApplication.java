@@ -31,15 +31,15 @@ import java.util.Map;
 @EnableCircuitBreaker
 @EnableAsync
 public class DemoApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
-    }
     @Bean
     @LoadBalanced
     public RestTemplate createRestTemplate() {
         return new RestTemplate();
     }
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
 
     @Value("${server.port}")
     String port;
