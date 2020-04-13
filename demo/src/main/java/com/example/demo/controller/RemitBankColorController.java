@@ -199,7 +199,7 @@ public class RemitBankColorController {
     public String getFeign4() {
         Map<String, String> map = new HashMap<>();
         map.put("name", "name");
-        String name = "name";
+
         RestTemplate cc = RestTemplateConfig.restTemplate();
         String a = cc.getForObject("https://httpbin.org/anything", String.class, map);
         // String a=getForm("https://httpbin.org/anything",map);
