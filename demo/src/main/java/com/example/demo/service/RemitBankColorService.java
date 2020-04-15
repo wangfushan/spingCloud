@@ -47,11 +47,12 @@ public class RemitBankColorService {
             public void run() {
                 Map<String, Object> map = new HashMap<>();
                 map.put("typeCode", "102");
-                 tick = remitBankColorMapper.listBankColor(map).size();//保证票数一致
+                tick = remitBankColorMapper.listBankColor(map).size();//保证票数一致
                 System.out.println(tick);
                 Random random = new Random();//随机数种子为系统时间
-                int bb=random.nextInt();
+
                 while (tick > 0) {
+                    int bb=random.nextInt();
                     synchronized (ob) {
                         if (tick > 0) {
                             System.out.println("卖出第" + tick + "张票！"+bb);
