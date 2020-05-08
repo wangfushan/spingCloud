@@ -3,15 +3,18 @@ import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
+import java.net.URLDecoder;
 import java.security.Key;
 import java.security.KeyFactory;
+import java.security.PrivateKey;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.example.demo.common.util.SignatureUtil.getPrivateKeyFromPKCS8;
 
 public class Rsa {
     /**
@@ -27,11 +30,12 @@ public class Rsa {
     /**
      * 指定私钥存放文件
      */
-    private static String  PRIVATE_KEY_FILE= "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2EdRpm79eaEYVnjgITvYJnc5qh7X+J+gSBSo/PwJZlWHCAOyIlW5aIC6A+SBUkkC1Q+psr/R7eDrHR2DCb15/GZTcoWDy4eCnWRvnswT/IkNYgpSOTFPqkF9l0fhvLbMma3G14he0DYSMl7+o5KnGFUgwcBH+wYHhUTliVyARvrRInMoutOSoSsDd8ppcVqdMqckA8qt5k3oaPzyExynLWI1Nb0FCp2bx4uhuS46jX0Cce9guBik8w/dN9nynG2o2HETaVS625VGsSfAfKmnBRZ52HatBB5pVs701ER6ZhotcVU9xvo5Brh2vA9L7j8U2XLXrnpjfH7OZOiM9/7nlAgMBAAECggEBAJACaE2kKGjG93BP9if0NL2EeWlfsH64F+Jw/WqLLxOmiW1HB9A8yc01mTLgWkcqa040yu5u+mTSw0MuXQVNy6Oim1ErwCA8s1IKtHy+55vaAQS4PEKVcuacjShfPS7LKeGgqI9hprf+3THLMYioXPTVjoTpkAI+EroiYc479ZyyL0XUeKPdU7fsEtxxw8G4vzikmvFHIa/V420q1HFXhBxdR646Rce85wrhbDQTzBKJNh2GQ0OKp0KIQNPqAZ8wyLK57n6ZNE0Nta7aS3FZOFgzaIEt7BD9ZsDnMs+VKiDMmYDUQCC4L73GeLZdUPlMd5lC4sBTRRpsPazFDdj9jyECgYEA9cZqrTZXXyBiOji4LDJBuSISMFiqrLeM5ZUL2Em7mkA5n8DgLVX3LWp/2SWqSMJP0UNU6Pj4uIWe754ir4/jGTV9iPVMJqdE2sySDpfcLDo1hsysgDYuZkSfIeu+wYajPu4CmZNKpgLzvz6cfj7kogMyY8QgKfnSJK1sItO03k0CgYEAvaTuDXYhew4TOxFwVrBjZjxQBNeK+Nd4lJ0mx8a7gmhP2p87WDR7VDP8u30d8PByiyxjG1lZ70FRaTt9lgolR2Es9Vjj8EBAdcjeIO52wLppBwVfBxC/al6dt5hl5aFIXBWE5/iEVKB2BFDvXKVArC6VusMCSmGshDHLlqusBfkCgYBVtc9n/oZzxzBaS4N27kPbU1VyhMlomE5LljHeSMBi57jwzGuhg9RCg1x4ltkOrKz3Nnr7EDB08SxfNg+0mAJDvVK9G4ZmCHlLsIHTEwSWa+pUyzXxNHPz+ERiqPsKNHDjtk8zzZj/0hG9BRHAOSC0m1bMUg5BdTziy5PlhV0TFQKBgCFbyaQEi48hwrA5ORGGpXVuVoUDhSaQgF1j51Zs1r7xqlpCeCXj1W3SVzqDn6iqIvvoKua8qN01GCTymfyyfCw6I7ZklHPGWZBebPRN/gWYxLC/eR+9Cm6jhgqte/8Qh7Hq9x320RAxyZCoy/H3/5BKAXyAoP6Ef9whBjbSq8fBAoGAPk2wqJtnC/s9Q/y1FdcqgIRcH4WBUuYTff4oLiGclno6HKRAMVek3HE4DjxaxSINBNzXIXiYGIKwq11yky5KkgnUSmPKHaslo8XXbD3MIe0nuYg3MXjOsdlBtHlKlNdj2jttZ995/luHed9x8t6LYwsu+yVR62sYyqVx0z8gVQ8=";
+    private static String  PRIVATE_KEY_FILE= "MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBANFqaISzzjv89+38z7EHn9PDG6I5jNUQWHT/NDjgo4qNiZvQLthlbpNILMGJ3KwqI2TDyojRhwMNABLhzmYoSTlYs3NkowRu8S/L7FSDu11kFRqSU/Ox7tsYIMJALDOXV1eBZ5mEfqz28YJA8vouaT283JMaoqbavGK0N7i7D1BZAgMBAAECgYEAuIEk9w4oPSgjFJYyMsoB4iQ7m5FS6IHPPb1/uEELNc6AGDyymUu8wZzMefRJ7ZHuvx/VuPfKGUEB+KDkJZOG9pwXdAu6hLJS7iUpaK/JbS0DqOtRlFHnNft4YD50tWp/dZr7zNEvcwkRbS5OZJDRZ3IOCf76Z/q7vXimm27eL5UCQQDzL5xRGb0kddBkGjzMQ7IJ04hl2VkaaHBkqLrmIm9OxTeA+0tH17+AXvr2xbhXb4sOqUmmThB3YCTqowDD6NHDAkEA3HNDKFhTR7MEQCDy/OkJVFaIhr6gKavvMicYQx3fprAIlx+cG8xHlR4maHkxHqdEeP/hFCe5YJ3+uy0EPAF3swJBAINEv+xHKIH11ncycn8QS5piRM41dJN8rK6pJbnz/IFYk41cGFa/bu+sVWu/brJD05wmZUsP+HN3wnWlZ1RY6GECQG10AQUYDYlM1bBta5essIgiSrj0DpuCFUoGZSJ1w6SERE+cTyryGxxrktBOU9gPXozhJsSWEJFrAJ24dSDB7ccCQQCWX34oHvbVzLrsfCnQSRDP4HvFoJwQLHTDcP5ujvUnWd8rUNkflxt7Gfgr7sO5dMksMurGxSx4jcZr7TwE77Z8";
 
-    public static void main(String[] args) throws Exception {
+   public static void main(String[] args) throws Exception {
 
         //String source = "你好nihao";// 要加密的字符串
+
         Map<String,String> map=new HashMap<>();
         map.put("aaa","xiaomimng ");
         map.put("121456","877874 ");
@@ -42,11 +46,41 @@ public class Rsa {
         System.out.print("用公钥加密后的结果为:" + cryptograph);
         System.out.println();
 
-        String target = decrypt(cryptograph);// 解密密文
+
+        String target = decrypt("bDfBj7gjbKo7e+HMqi9NPiMBwCmJpd+yrWFs+nWNmCtWNrkt31MF9PoPstV6Zxjf+SqNwp85qifWxC97IZCy8VEsb9kAOdVLxivf3UX5ocwUV52YAlQyPIVnh06jP1iq/1XwedBBsVvp6sQb69X1wiNHh4Lnlu+egRIqBGErTZ8");// 解密密文
         System.out.println("用私钥解密后的字符串为：" + target);
         System.out.println();
     }
 
+/*    *//**
+     *                   第二种方法
+     * @param str
+     * @return
+     */
+/*    public static void main(String[] args) {
+        String a="gVmBqz74JPKoGzk+N8QcmtxFDbAay6LvQxEJJxJjrlbk84bPvMoe4haoFZBq7VrR4+3HmpjZpZPFl2Rq3qtF0F7cVGxDFUqGE1XmuNLII0o/odxU/9WE5xxBXchQphMYAlSvvKecWi55exqlDjnoRlpZQdAOcU2pah/KagcoX0E=";
+
+        //String a="bDfBj7gjbKo7e+HMqi9NPiMBwCmJpd+yrWFs+nWNmCtWNrkt31MF9PoPstV6Zxjf+SqNwp85qifWxC97IZCy8VEsb9kAOdVLxivf3UX5ocwUV52YAlQyPIVnh06jP1iq/1XwedBBsVvp6sQb69X1wiNHh4Lnlu+egRIqBGErTZ8";
+        String b="MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBANFqaISzzjv89+38z7EHn9PDG6I5jNUQWHT/NDjgo4qNiZvQLthlbpNILMGJ3KwqI2TDyojRhwMNABLhzmYoSTlYs3NkowRu8S/L7FSDu11kFRqSU/Ox7tsYIMJALDOXV1eBZ5mEfqz28YJA8vouaT283JMaoqbavGK0N7i7D1BZAgMBAAECgYEAuIEk9w4oPSgjFJYyMsoB4iQ7m5FS6IHPPb1/uEELNc6AGDyymUu8wZzMefRJ7ZHuvx/VuPfKGUEB+KDkJZOG9pwXdAu6hLJS7iUpaK/JbS0DqOtRlFHnNft4YD50tWp/dZr7zNEvcwkRbS5OZJDRZ3IOCf76Z/q7vXimm27eL5UCQQDzL5xRGb0kddBkGjzMQ7IJ04hl2VkaaHBkqLrmIm9OxTeA+0tH17+AXvr2xbhXb4sOqUmmThB3YCTqowDD6NHDAkEA3HNDKFhTR7MEQCDy/OkJVFaIhr6gKavvMicYQx3fprAIlx+cG8xHlR4maHkxHqdEeP/hFCe5YJ3+uy0EPAF3swJBAINEv+xHKIH11ncycn8QS5piRM41dJN8rK6pJbnz/IFYk41cGFa/bu+sVWu/brJD05wmZUsP+HN3wnWlZ1RY6GECQG10AQUYDYlM1bBta5essIgiSrj0DpuCFUoGZSJ1w6SERE+cTyryGxxrktBOU9gPXozhJsSWEJFrAJ24dSDB7ccCQQCWX34oHvbVzLrsfCnQSRDP4HvFoJwQLHTDcP5ujvUnWd8rUNkflxt7Gfgr7sO5dMksMurGxSx4jcZr7TwE77Z8";
+        try{
+            System.out.println(rsaDecrypt(a,b,"utf-8"));
+        }catch (Exception e){
+            System.out.println("e");
+        }
+    }*/
+
+    public static String checkString(String str) {
+        int len = str.length();
+        int i = 0, j = 0;
+        char[] strChar = str.toCharArray();
+        for (i = 0; i < len; i++) {
+            if (' ' == strChar[i] || '\t' == strChar[i] || '\n' == strChar[i]){
+                strChar[i] = '+';
+                continue;
+            }
+        }
+        return new String(Arrays.copyOf(strChar, len));
+    }
 
     /**
      * 加密方法
@@ -70,6 +104,50 @@ public class Rsa {
         BASE64Encoder encoder = new BASE64Encoder();
         return encoder.encode(b1);
     }
+
+
+    /**
+     *                         第二种方法 解密
+     * @param content   =utf-8
+     * @param privateKey
+     * @param charset
+     * @return
+     * @throws Exception
+     */
+
+    public static String rsaDecrypt(String content, String privateKey, String charset) throws Exception {
+        try {
+            PrivateKey priKey = getPrivateKeyFromPKCS8(new ByteArrayInputStream(privateKey.getBytes()));
+            Cipher cipher = Cipher.getInstance("RSA");
+            cipher.init(Cipher.DECRYPT_MODE, priKey);
+            byte[] encryptedData = (charset == null || charset.isEmpty()) ? Base.decodeBase64(content.getBytes()):Base.decodeBase64(content.getBytes(charset));
+            int inputLen = encryptedData.length;
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            int offSet = 0;
+            byte[] cache;
+            int i = 0;
+            // 对数据分段解密  
+            while (inputLen - offSet > 0) {
+                if (inputLen - offSet > 128) {
+                    cache = cipher.doFinal(encryptedData, offSet, 128);
+                } else {
+                    cache = cipher.doFinal(encryptedData, offSet, inputLen - offSet);
+                }
+                out.write(cache, 0, cache.length);
+                i++;
+                offSet = i * 128;
+            }
+            byte[] decryptedData = out.toByteArray();
+            out.close();
+            return (charset == null || charset.isEmpty()) ? new String(decryptedData) : new String(decryptedData, charset);
+        } catch (Exception e) {
+            throw new Exception("EncodeContent = " + content + ",charset = " + charset, e);
+        }
+    }
+
+
+
+
 
     /**
      * 解密算法

@@ -101,7 +101,7 @@ public class RandomUtil {
     }
 
     /**
-     * @param urlparam 带分隔的url参数
+     * @param urlparam 带分隔的url参数  转map专用
      * @return
      */
     public static Map<String, String> url2map(String urlparam) {

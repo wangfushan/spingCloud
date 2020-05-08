@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 
 @SuppressWarnings("rawtypes")
@@ -76,6 +77,8 @@ public class JsonHelper {
 		}
 	}
 
+
+
 	public static Map parseToMap(String json) {
 		return parseToObject(json, Map.class);
 	}
@@ -91,7 +94,21 @@ public class JsonHelper {
 		}
 		return parseToObject(b, 0, b.length, Map.class);
 	}
-
+	/**
+	 * @param urlparam 带分隔的url参数  转map专用
+	 * @return
+	 */
+	public static Map<String, String> url2map(String urlparam) {
+		Map<String, String> map = new HashMap<String, String>();
+		String[] param = urlparam.split("&");
+		for (String keyvalue : param) {
+			String[] pair = keyvalue.split("=");
+			if (pair.length == 2) {
+				map.put(pair[0], pair[1]);
+			}
+		}
+		return map;
+	}
 	public static Map parseToMap(InputStream is) {
 		return parseToObject(is, Map.class);
 	}
